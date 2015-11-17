@@ -16,5 +16,9 @@ describe LinkedRef::Referencia do
 			expect(@ref1.autores).to eq("Apellido, N.")
 			expect(@ref2.autores).to eq("Apellido, N.")
 		end
+		it "Lanzar excepción si sólo hay un elemento" do
+			expect{LinkedRef::Referencia.new(["Nombre"], "Mi Título", @fecha)}.to raise_error(ArgumentError, "Se especifica únicamente el nombre o el apellido")
+			expect{LinkedRef::Referencia.new(["Apellido"], "Mi Título", @fecha)}.to raise_error(ArgumentError, "Se especifica únicamente el nombre o el apellido")
+		end
 	end
 end
