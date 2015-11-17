@@ -1,5 +1,5 @@
 module LinkedRef
-	Struct.new("Node", :value, :next)
+	Struct.new("Node", :value, :next, :last)
 	
 	class LinkedList
 		def initialize()
