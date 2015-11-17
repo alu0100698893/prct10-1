@@ -1,5 +1,5 @@
 module LinkedRef
-	Struct.new("Node", :value, :next, :last)
+	Struct.new("Node", :value, :next, :prev)
 	
 	class LinkedList
 		def initialize()
@@ -22,8 +22,8 @@ module LinkedRef
 				@head = Struct::Node.new(val, nil, nil)
 				@tail = @head
 			else
-				@head[:last] = Struct::Node.new(val, nil, @head)
-				@head = @head[:last]
+				@head[:prev] = Struct::Node.new(val, @head, nil)
+				@head = @head[:prev]
 			end
 		end
 		def insert_end(val)

@@ -16,11 +16,15 @@ describe LinkedRef::LinkedList do
 	describe "Métodos de inserción" do
 		it "Por el principio" do
 			@lista.insert_beg(4)
-			expect(@lista.to_s).to eq("[4]")
+			@lista.insert_beg(6)
+			@lista.insert_beg(8)
+			expect(@lista.to_s).to eq("[8, 6, 4]")
 		end
 		it "Por el final" do
 			@lista.insert_end(3)
-			expect(@lista.to_s).to eq("[3]")
+			@lista.insert_end(5)
+			@lista.insert_end(7)
+			expect(@lista.to_s).to eq("[3, 5, 7]")
 		end
 	end
 end
