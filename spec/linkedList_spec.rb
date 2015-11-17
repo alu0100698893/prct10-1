@@ -3,6 +3,13 @@ require "spec_helper"
 describe LinkedRef::LinkedList do
 	before :each do
 		@lista = LinkedRef::LinkedList.new
+		@lista_insertada = LinkedRef::LinkedList.new
+		@lista_insertada.insert_beg(4)
+		@lista_insertada.insert_beg(6)
+		@lista_insertada.insert_beg(8)
+		@lista_insertada.insert_end(3)
+		@lista_insertada.insert_end(5)
+		@lista_insertada.insert_end(7)
 	end
 	it "Debe existir el nodo" do
 		expect(Struct::Node.new(1, nil)).not_to be_nil
