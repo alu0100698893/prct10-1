@@ -77,5 +77,14 @@ module LinkedRef
 			string += " de "
 			string += @fecha.year.to_s
 		end
+		def fecha_mes()
+			string = ""
+			string += get_mes(@fecha.mon)
+			string += " "
+			string += @fecha.year.to_s
+		end
+		def fecha_anio()
+			@fecha.year.to_s
+		end
 	end
 end
