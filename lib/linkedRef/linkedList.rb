@@ -57,5 +57,17 @@ module LinkedRef
 				@tail[:next] = nil
 			end
 		end
+		def [](index)
+			actual = 0
+			iterator = @head
+			while (!iterator.nil?) && (actual < index)
+				iterator = iterator[:next]
+				actual+=1
+			end
+			if(actual != index)
+				raise RuntimeError, "Bad index"
+			end
+			return iterator[:value]
+		end
 	end
 end

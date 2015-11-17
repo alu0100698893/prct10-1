@@ -51,4 +51,14 @@ describe LinkedRef::LinkedList do
 			expect{@lista.extract_beg}.to raise_error(RuntimeError, "List is empty, you can't extract")
 		end
 	end
+	describe "Métodos de información y accesores" do
+		it "Acceder mediante un índice" do
+			expect(@lista_insertada[4].to_s).to eq("5")
+			expect(@lista_insertada[2].to_s).to eq("4")
+		end
+		it "Lanzar excepción en caso de un índice erróneo" do
+			expect{@lista[6]}.to raise_error(RuntimeError, "Bad index")
+			expect{@lista[-1]}.to raise_error(RuntimeError, "Bad index")
+		end
+	end
 end
