@@ -40,5 +40,42 @@ module LinkedRef
 			end
 			return final
 		end
+		def get_mes(numero)
+			return case numero
+			when 1
+				"enero"
+			when 2
+				"febrero"
+			when 3
+				"marzo"
+			when 4
+				"abril"
+			when 5
+				"mayo"
+			when 6
+				"junio"
+			when 7
+				"julio"
+			when 8
+				"agosto"
+			when 9
+				"septiembre"
+			when 10
+				"octubre"
+			when 11
+				"noviembre"
+			when 12
+				"diciembre"
+			else
+				"???"
+			end	
+		end
+		def fecha_completa()
+			string =  @fecha.day.to_s
+			string += " de "
+			string += get_mes(@fecha.mon)
+			string += " de "
+			string += @fecha.year.to_s
+		end
 	end
 end
