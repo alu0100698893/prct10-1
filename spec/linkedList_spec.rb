@@ -46,5 +46,9 @@ describe LinkedRef::LinkedList do
 			@lista_insertada.extract_end
 			expect(@lista_insertada.to_s).to eq("[8, 6, 4, 3]")
 		end
+		it "Lanzar excepciones en caso de extraer estando vacia" do
+			expect{@lista.extract_end}.to raise_error(RuntimeError, "List is empty, you can't extract")
+			expect{@lista.extract_beg}.to raise_error(RuntimeError, "List is empty, you can't extract")
+		end
 	end
 end
