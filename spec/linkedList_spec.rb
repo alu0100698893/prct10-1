@@ -19,6 +19,7 @@ describe LinkedRef::LinkedList do
 	end
 	it "Debe existir un método para imprimir la lista" do
 		expect(@lista.to_s).to eq("[]")
+		expect(@lista_insertada.to_s).to eq("[8, 6, 4, 3, 5, 7]")
 	end
 	describe "Métodos de inserción" do
 		it "Por el principio" do
@@ -32,6 +33,18 @@ describe LinkedRef::LinkedList do
 			@lista.insert_end(5)
 			@lista.insert_end(7)
 			expect(@lista.to_s).to eq("[3, 5, 7]")
+		end
+	end
+	describe "Métodos de extracción" do
+		it "Por el principio" do
+			@lista_insertada.extract_beg
+			@lista_insertada.extract_beg
+			expect(@lista_insertada.to_s).to eq("[4, 3, 5, 7]")
+		end
+		it "Por el final" do
+			@lista_insertada.extract_end
+			@lista_insertada.extract_end
+			expect(@lista_insertada.to_s).to eq("[8, 6, 4, 3]")
 		end
 	end
 end
