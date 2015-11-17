@@ -80,3 +80,4 @@ guard :rspec, cmd: "bundle exec rspec" do
     Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
   end
 end
+watch(/.*/) { |m| puts "#{m[0]} changed." }
