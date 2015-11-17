@@ -21,4 +21,15 @@ describe LinkedRef::Referencia do
 			expect{LinkedRef::Referencia.new(["Apellido"], "Mi Título", @fecha)}.to raise_error(ArgumentError, "Se especifica únicamente el nombre o el apellido")
 		end
 	end
+	describe "Impresión de las fechas" do
+		it "Fecha completa" do
+			expect(@ref1.fecha_completa).to eq("3 de febrero de 2001")
+		end
+		it "Fecha mes y año" do
+			expect(@ref1.fecha_mes).to eq("febrero 2001")
+		end
+		it "Fecha año solo" do
+			expect(@ref1.fecha_anio).to eq("2001")
+		end
+	end
 end
