@@ -35,5 +35,27 @@ module LinkedRef
 				@tail = @tail[:next]
 			end
 		end
+		def extract_beg()
+			if @head.nil?
+				raise RuntimeError, "List is empty, you can't extract"
+			end
+			if @head == @tail
+				@head, @tail = nil
+			else
+				@head = @head[:next]
+				@head[:prev] = nil
+			end
+		end
+		def extract_end()
+			if @head.nil?
+				raise RuntimeError, "List is empty, you can't extract"
+			end
+			if @head == @tail
+				@head, @tail = nil
+			else
+				@tail = @tail[:prev]
+				@tail[:next] = nil
+			end
+		end
 	end
 end
