@@ -6,5 +6,8 @@ module LinkedRef
 			@head = nil
 			@tail = nil
 		end
+		def to_s
+			return "[]"
+		end
 	end
 end
