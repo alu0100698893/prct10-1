@@ -12,6 +12,8 @@
 # Rafael Herrero Álvarez
 # Herrero, R.
 
+require "date"
+
 module LinkedRef
 	class Referencia
 		def initialize(autores, titulo, fecha)

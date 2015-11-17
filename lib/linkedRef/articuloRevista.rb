@@ -19,5 +19,8 @@ require 'linkedRef/referencia'
 
 module LinkedRef
 	class ArticuloRevista < Referencia
+		def initialize(autores, titulo, fecha)
+			super(autores, titulo, fecha)
+		end
 	end
 end
