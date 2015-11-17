@@ -60,5 +60,8 @@ describe LinkedRef::LinkedList do
 			expect{@lista[6]}.to raise_error(RuntimeError, "Bad index")
 			expect{@lista[-1]}.to raise_error(RuntimeError, "Bad index")
 		end
+		it "Método para obtener el tamaño" do
+			expect(@lista.size.to_s).to eq("6")
+		end
 	end
 end
