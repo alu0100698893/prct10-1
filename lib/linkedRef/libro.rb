@@ -4,6 +4,9 @@ module LinkedRef
 	class Libro < Referencia
 		def initialize(autores, titulo, fecha, editorial, isbn, edicion = nil)
 			super(autores, titulo, fecha)
+			raise ArgumentError, "La editorial no es un string" unless editorial.is_a?(String)
+			raise ArgumentError, "El isbn no es un array" unless isbn.is_a?(Array)
+			raise ArgumentError, "La edicion no es numeric o nil" unless edicion.nil? || edicion.is_a?(Numeric)
 			@editorial = editorial
 			@edicion = edicion
 			@isbn = isbn

@@ -4,6 +4,7 @@ module LinkedRef
 	class DocumentoElectronico < PublicacionesPeriodicas
 		def initialize(autores, titulo, fecha, url)
 			super(autores, titulo, fecha)
+			raise ArgumentError, "La URL no es un string" unless url.is_a?(String)
 			@url = url
 		end
 		def to_s()
