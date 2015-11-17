@@ -61,7 +61,18 @@ describe LinkedRef::LinkedList do
 			expect{@lista[-1]}.to raise_error(RuntimeError, "Bad index")
 		end
 		it "Método para obtener el tamaño" do
-			expect(@lista.size.to_s).to eq("6")
+			expect(@lista_insertada.size.to_s).to eq("6")
+		end
+		it "Hacer una enumeración" do
+			str = "["
+			@lista_insertada.each{|i|
+				str << i.to_s << ", "
+			}
+			str << "]"
+			expect(str).to eq("[8, 6, 4, 3, 5, 7, ]")
+		end
+		it "Obtener el máximo de la lista" do
+			expect(@lista_insertada.max.to_s).to eq("8")
 		end
 	end
 end
