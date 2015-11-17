@@ -1,6 +1,5 @@
 require "spec_helper"
 
-
 # Formato de revista:
 # Autor[,...]. (fecha).
 # Título del artículo.
@@ -18,15 +17,15 @@ require "spec_helper"
 # El Gobierno británico lleva la guerra contra el terrorismo al ciberespacio.
 # El Mundo.
 
-describe LinkedRef::ArticuloPeriodico do
+describe LinkedRef::Periodico do
 	before :each do
 		@fecha = Date.new(2001, 2, 3)
-		@artPer1 = LinkedRef::ArticuloPeriodico.new(["Jorge Berngueras"], "Youtube Music, la app de vídeos musicales de Google, ya se puede descargar", Date.new(2015, 11, 12), "El Periódico")
-		@artPer2 = LinkedRef::ArticuloPeriodico.new(["Juan Palazon", "Laura Pajuelo"], "El primer móvil con Android One", Date.new(2015, 11, 16), "El País")
-		@artPer3 = LinkedRef::ArticuloPeriodico.new(["Carlos Fresneda"], "El Gobierno británico lleva la guerra contra el terrorismo al ciberespacio", Date.new(2015, 11, 17), "El Mundo")
+		@artPer1 = LinkedRef::Periodico.new(["Jorge Berngueras"], "Youtube Music, la app de vídeos musicales de Google, ya se puede descargar", Date.new(2015, 11, 12), "El Periódico")
+		@artPer2 = LinkedRef::Periodico.new(["Juan Palazon", "Laura Pajuelo"], "El primer móvil con Android One", Date.new(2015, 11, 16), "El País")
+		@artPer3 = LinkedRef::Periodico.new(["Carlos Fresneda"], "El Gobierno británico lleva la guerra contra el terrorismo al ciberespacio", Date.new(2015, 11, 17), "El Mundo")
 	end
 	it 'Debe existir a clase' do
-		expect(LinkedRef::ArticuloPeriodico.new(["Nombre Apellido"], "Mi Título", @fecha, "Mi periodico")).not_to be_nil
+		expect(LinkedRef::Periodico.new(["Nombre Apellido"], "Mi Título", @fecha, "Mi periodico")).not_to be_nil
 	end
 	describe "Debe almacenarse correctamente la referencia" do
 		it "Referencia Berngueras" do

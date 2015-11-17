@@ -1,7 +1,7 @@
-require 'linkedRef/referencia'
+require 'linkedRef/articulo'
 
 module LinkedRef
-	class ArticuloPeriodico < Referencia
+	class Periodico < Articulo
 		def initialize(autores, titulo, fecha, periodico)
 			super(autores, titulo, fecha)
 			@periodico = periodico
