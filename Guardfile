@@ -51,6 +51,7 @@ guard :rspec, cmd: "bundle exec rspec" do
   # Ruby files
   ruby = dsl.ruby
   dsl.watch_spec_files_for(ruby.lib_files)
+  watch(/.*/) { |m| puts "#{m[0]} changed." }
 
   # Rails files
   rails = dsl.rails(view_extensions: %w(erb haml slim))
@@ -80,4 +81,3 @@ guard :rspec, cmd: "bundle exec rspec" do
     Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
   end
 end
-watch(/.*/) { |m| puts "#{m[0]} changed." }
