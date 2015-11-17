@@ -16,6 +16,7 @@ require "date"
 
 module LinkedRef
 	class Referencia
+		attr_reader :titulo
 		def initialize(autores, titulo, fecha)
 			raise ArgumentError, "El autor no es un array" unless autores.is_a?(Array)
 			autores.each do |a|
@@ -36,7 +37,7 @@ module LinkedRef
 				final+=", "
 				final+=separado[0][0]
 				final+="."
-				final+=" " unless a == @autores.last
+				final+=", " unless a == @autores.last
 			end
 			return final
 		end
