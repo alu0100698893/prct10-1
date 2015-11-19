@@ -18,3 +18,6 @@ Usaremos una metodología TDD. Además de usar las herramientas de anteriores pr
       - jruby-19mode # JRuby in 1.9 mode
       - rbx-19mode
     before_install: gem install bundler -v 1.10.6
+
+En la siguiente imagen podemos ver el estado de las pruebas:
+[![Build Status](https://travis-ci.org/DanielRamosAcosta/prct09.svg?branch=master)](https://travis-ci.org/DanielRamosAcosta/prct09)
