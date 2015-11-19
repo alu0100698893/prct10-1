@@ -45,4 +45,8 @@ describe LinkedRef::LinkedList do
 		@lista.insert_end(@docElec)
 		expect(@lista.to_s).to eq("[Rowling, J.\nHarry Potter y la Piedra Filosofal.\nEd: Salamandra (6)\nISBN-10: 2070541274\nISBN-13: 847-8885617, Castagnio, J.\nTecnicas, materiales y aplicaciones en nanotecnologia.\nActa Bioquimica Clinica Latinoamericana, 41 (2), abril 2007., Palazon, J., Pajuelo, L. (16 de noviembre de 2015).\nEl primer movil con Android One.\nEl Pais., Baker, J. (2000).\nEvaluacion del impacto de los proyectos de desarrollo en la pobreza: Manual para profesionales.\nDisponible en http://siteresources.worldbank.org/INTISPMA/Resources/Impact-Evaluation-Handbook--Spanish-/manual.pdf]")
 	end
+	it "Podemos comparar distintos tipos de referencias" do
+		expect(@revista>@libro).to be true
+		expect(@libro<@revista).to be true
+	end
 end
