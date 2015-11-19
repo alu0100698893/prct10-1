@@ -1,4 +1,5 @@
 #LPP: Práctica 5 - Pruebas Unitarias
+[![Build Status](https://travis-ci.org/DanielRamosAcosta/prct09.svg?branch=master)](https://travis-ci.org/DanielRamosAcosta/prct09)
 ##Enunciado
 Se nos pide dos cosas principales en base a la anterior práctica
 
@@ -19,5 +20,4 @@ Usaremos una metodología TDD. Además de usar las herramientas de anteriores pr
       - rbx-19mode
     before_install: gem install bundler -v 1.10.6
 
-En la siguiente imagen podemos ver el estado de las pruebas:
-[![Build Status](https://travis-ci.org/DanielRamosAcosta/prct09.svg?branch=master)](https://travis-ci.org/DanielRamosAcosta/prct09)
+En la imagen de la cabecera se puede ver el estado de Travis CI.
