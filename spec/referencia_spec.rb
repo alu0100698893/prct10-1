@@ -5,6 +5,7 @@ describe LinkedRef::Referencia do
 		@fecha = Date.new(2001, 2, 3)
 		@ref1 = LinkedRef::Referencia.new(["Nombre Apellido"], "Mi Titulo", @fecha)
 		@ref2 = LinkedRef::Referencia.new(["Nombre Apellido Apellido"], "Mi Titulo", @fecha)
+		@ref3 = LinkedRef::Referencia.new(["Nombre Apellido"], "Titulo mayor que el del resto", @fecha)
 	end
 	describe "Existe la clase referencia" do
 		it "Debe exisistir la clase referencia" do
@@ -31,5 +32,9 @@ describe LinkedRef::Referencia do
 		it "Fecha anio solo" do
 			expect(@ref1.fecha_anio).to eq("2001")
 		end
+	end
+	it "Debe poder ser comparable" do
+		expect(@ref3>@ref1).to be true
+		expect(@ref1<@ref3).to be true
 	end
 end

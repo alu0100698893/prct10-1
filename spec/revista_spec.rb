@@ -38,4 +38,8 @@ describe LinkedRef::Revista do
 			expect(@revista3.to_s).to eq("Valdes, H., Aviles, P., Mandakovic, B.\nLa tierra se toma la revancha?: calentamiento global.\nConozca mas, 19 (10), octubre 2008.")
 		end
 	end
+	it "Debe poder ser comparable" do
+		expect(@revista1>@revista3).to be true
+		expect(@revista3<@revista1).to be true
+	end
 end

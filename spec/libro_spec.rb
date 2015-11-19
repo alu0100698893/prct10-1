@@ -23,4 +23,8 @@ describe LinkedRef::Libro do
 			expect(@libro3.to_s).to eq("Garcia, F.\nAzul....\nEd: Alianza Editorial\nISBN-13: 978-8420668406")
 		end
 	end
+	it "Debe poder ser comparable" do
+		expect(@libro1>@libro3).to be true
+		expect(@libro3<@libro1).to be true
+	end
 end

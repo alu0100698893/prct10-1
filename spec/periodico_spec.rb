@@ -38,4 +38,8 @@ describe LinkedRef::Periodico do
 			expect(@artPer3.to_s).to eq("Fresneda, C. (17 de noviembre de 2015).\nEl Gobierno britanico lleva la guerra contra el terrorismo al ciberespacio.\nEl Mundo.")
 		end
 	end
+	it "Debe poder ser comparable" do
+		expect(@artPer1>@artPer2).to be true
+		expect(@artPer2<@artPer1).to be true
+	end
 end
