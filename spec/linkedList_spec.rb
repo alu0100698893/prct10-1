@@ -17,11 +17,11 @@ describe LinkedRef::LinkedList do
 	it "Debe existir la clase LinkedList" do
 		expect(LinkedRef::LinkedList.new).not_to be_nil
 	end
-	it "Debe existir un método para imprimir la lista" do
+	it "Debe existir un metodo para imprimir la lista" do
 		expect(@lista.to_s).to eq("[]")
 		expect(@lista_insertada.to_s).to eq("[8, 6, 4, 3, 5, 7]")
 	end
-	describe "Métodos de inserción" do
+	describe "Metodos de insercion" do
 		it "Por el principio" do
 			@lista.insert_beg(4)
 			@lista.insert_beg(6)
@@ -35,7 +35,7 @@ describe LinkedRef::LinkedList do
 			expect(@lista.to_s).to eq("[3, 5, 7]")
 		end
 	end
-	describe "Métodos de extracción" do
+	describe "Metodos de extraccion" do
 		it "Por el principio" do
 			@lista_insertada.extract_beg
 			@lista_insertada.extract_beg
@@ -51,19 +51,19 @@ describe LinkedRef::LinkedList do
 			expect{@lista.extract_beg}.to raise_error(RuntimeError, "List is empty, you can't extract")
 		end
 	end
-	describe "Métodos de información y accesores" do
-		it "Acceder mediante un índice" do
+	describe "Metodos de informacion y accesores" do
+		it "Acceder mediante un indice" do
 			expect(@lista_insertada[4].to_s).to eq("5")
 			expect(@lista_insertada[2].to_s).to eq("4")
 		end
-		it "Lanzar excepción en caso de un índice erróneo" do
+		it "Lanzar excepcion en caso de un indice erroneo" do
 			expect{@lista[6]}.to raise_error(RuntimeError, "Bad index")
 			expect{@lista[-1]}.to raise_error(RuntimeError, "Bad index")
 		end
-		it "Método para obtener el tamaño" do
+		it "Metodo para obtener el tamaño" do
 			expect(@lista_insertada.size.to_s).to eq("6")
 		end
-		it "Hacer una enumeración" do
+		it "Hacer una enumeracion" do
 			str = "["
 			@lista_insertada.each{|i|
 				str << i.to_s << ", "
@@ -71,7 +71,7 @@ describe LinkedRef::LinkedList do
 			str << "]"
 			expect(str).to eq("[8, 6, 4, 3, 5, 7, ]")
 		end
-		it "Obtener el máximo de la lista" do
+		it "Obtener el maximo de la lista" do
 			expect(@lista_insertada.max.to_s).to eq("8")
 		end
 	end
