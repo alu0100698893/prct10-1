@@ -39,6 +39,7 @@ describe LinkedRef::DocumentoElectronico do
 		end
 	end
 	it "Debe poder ser comparable" do
-		expect(@docElec1<@docElec1).to be false
+		expect(@docElec1>@docElec3).to be true
+		expect(@docElec3<@docElec1).to be true
 	end
 end
