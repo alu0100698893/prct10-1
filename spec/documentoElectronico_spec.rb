@@ -38,4 +38,7 @@ describe LinkedRef::DocumentoElectronico do
 			expect(@docElec3.to_s).to eq("Michael, S. (2008).\nProgramming Language Pragmatics.\nDisponible en http://infoman.teikav.edu.gr/~stpapad/ScottCompilers.pdf")
 		end
 	end
+	it "Debe poder ser comparable" do
+		expect(@docElec1<@docElec1).to be false
+	end
 end
