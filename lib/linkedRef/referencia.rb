@@ -17,6 +17,7 @@ require "date"
 module LinkedRef
 	class Referencia
 		attr_reader :titulo
+		include Comparable
 		def initialize(autores, titulo, fecha)
 			raise ArgumentError, "El autor no es un array" unless autores.is_a?(Array)
 			autores.each do |a|
@@ -86,6 +87,9 @@ module LinkedRef
 		end
 		def fecha_anio()
 			@fecha.year.to_s
+		end
+		def <=>(other)
+			return @titulo.size <=> other.titulo.size
 		end
 	end
 end
