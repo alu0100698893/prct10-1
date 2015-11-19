@@ -1,7 +1,7 @@
 require "spec_helper"
 
 # Se sigue la siguiente convencion de nombre:
-# Autor[,...]. (año).
+# Autor[,...]. (anio).
 # Titulo.
 # Disponible en {url}
 

@@ -9,14 +9,14 @@ describe LinkedRef::Libro do
 	end
 	describe "Comprobar existencia de la clase" do
 		it "Debe exisistir la clase libro" do
-			expect(LinkedRef::Libro.new(["Nombre Apellido"], "Mi Titulo", @fecha, "El Mañana", ["11111-11111"], 5)).not_to be_nil
+			expect(LinkedRef::Libro.new(["Nombre Apellido"], "Mi Titulo", @fecha, "El Maniana", ["11111-11111"], 5)).not_to be_nil
 		end
 	end
 	describe "Debe almacenarse correctamente la referencia" do
 		it "Libro Harry Potter" do
 			expect(@libro1.to_s).to eq("Rowling, J.\nHarry Potter y la Piedra Filosofal.\nEd: Salamandra (6)\nISBN-10: 2070541274\nISBN-13: 847-8885617")
 		end
-		it "Libro Cien años de soledad" do
+		it "Libro Cien anios de soledad" do
 			expect(@libro2.to_s).to eq("Garcia, G.\nCronica de una muerte anunciada.\nEd: La Oveja Negra (3)\nISBN-10: 9871138016")
 		end
 		it "Libro Cronica de una muerte anunciada" do

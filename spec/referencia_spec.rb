@@ -25,10 +25,10 @@ describe LinkedRef::Referencia do
 		it "Fecha completa" do
 			expect(@ref1.fecha_completa).to eq("3 de febrero de 2001")
 		end
-		it "Fecha mes y año" do
+		it "Fecha mes y anio" do
 			expect(@ref1.fecha_mes).to eq("febrero 2001")
 		end
-		it "Fecha año solo" do
+		it "Fecha anio solo" do
 			expect(@ref1.fecha_anio).to eq("2001")
 		end
 	end
