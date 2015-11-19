@@ -21,7 +21,7 @@ module LinkedRef
 			raise ArgumentError, "El autor no es un array" unless autores.is_a?(Array)
 			autores.each do |a|
 				raise ArgumentError, "Uno de los autores no es un string" unless a.is_a?(String)
-				raise ArgumentError, "Se especifica únicamente el nombre o el apellido" unless a.split(/\W+/).length > 1
+				raise ArgumentError, "Se especifica unicamente el nombre o el apellido" unless a.split(/\W+/).length > 1
 			end
 			raise ArgumentError, "El titulo no es un string" unless titulo.is_a?(String)
 			raise ArgumentError, "La fecha no es de tipo Date" unless fecha.is_a?(Date)
