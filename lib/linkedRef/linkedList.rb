@@ -86,7 +86,7 @@ module LinkedRef
 			end
 			return iterator[:value]
 		end
-		def each(&block)
+		def each(&block) #El enum ya está listo
 			iterator = @head
 			while !iterator.nil?
 				block.call(iterator[:value])
