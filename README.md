@@ -1,5 +1,5 @@
 #LPP: Práctica 5 - Pruebas Unitarias
-[![Build Status](https://travis-ci.org/DanielRamosAcosta/prct09.svg?branch=master)](https://travis-ci.org/DanielRamosAcosta/prct09)
+[![Build Status](https://travis-ci.org/DanielRamosAcosta/prct10.svg?branch=master)](https://travis-ci.org/DanielRamosAcosta/prct10) [![Coverage Status](https://coveralls.io/repos/DanielRamosAcosta/prct10/badge.svg?branch=master&service=github)](https://coveralls.io/github/DanielRamosAcosta/prct10?branch=master)
 ##Enunciado
 Se nos pide dos cosas principales en base a la anterior práctica
 
