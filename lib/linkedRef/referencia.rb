@@ -106,22 +106,22 @@ module LinkedRef
 						arr = [@titulo, other.titulo]
 						arr.sort_by!{|t| t.downcase}
 						if(arr.first == @titulo)
-							return -1
+							return 1
 						end
-						return 1
+						return -1
 					end
 				elsif fecha > other.fecha
-					return 1
-				else
 					return -1
+				else
+					return 1
 				end
 			else
 				arr = [@autores, other.autores]
 				arr.sort_by!{|t| t.downcase}
 				if(arr.first == @autores)
-					return 1
+					return -1
 				end
-				return -1
+				return 1
 			end
 		end
 	end

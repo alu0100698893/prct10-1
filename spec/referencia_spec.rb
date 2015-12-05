@@ -44,16 +44,16 @@ describe LinkedRef::Referencia do
 	end
 	describe "El método comparable funciona correctamente" do
 		it "Ordenar en base al autor simplemente" do
-			expect(@ref2<@ref1).to be false #Garcia < Palazon? 7 < 17? true
-			expect(@ref1<@ref2).to be true #Garcia > Palazon? 17 < 7? false
+			expect(@ref2<@ref1).to be true #Garcia < Palazon? 7 < 17? true
+			expect(@ref1<@ref2).to be false #Garcia > Palazon? 17 < 7? false
 		end
 		it "Si los autores coiniciden, ordenar en base a la fecha (mas antiguo primero" do
-			expect(@ref4<@ref5).to be true #1997 < 2001? true
-			expect(@ref5<@ref4).to be false #2001 < 1997? false
+			expect(@ref4<@ref5).to be false #1997 < 2001? false
+			expect(@ref5<@ref4).to be true #2001 < 1997? true
 		end
 		it "Si los autores y las fechas coinciden, ordenar en base al título" do
-			expect(@ref6<@ref7).to be true #A < Z? true
-			expect(@ref7<@ref6).to be false #A < Z? true
+			expect(@ref6<@ref7).to be false #A < Z? false
+			expect(@ref7<@ref6).to be true #A < Z? true
 		end
 		it "Si son iguales, devolvemos un cero en el comparable" do
 			expect(@ref1<@ref1).to be false #A < A? false

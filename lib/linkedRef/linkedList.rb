@@ -65,6 +65,9 @@ module LinkedRef
 			@size-=1
 		end
 		def [](index)
+			at(index)
+		end
+		def at(index)
 			if !index.between?(0, size)
 				raise RuntimeError, "Bad index"
 			end
@@ -91,6 +94,23 @@ module LinkedRef
 			while !iterator.nil?
 				block.call(iterator[:value])
 				iterator = iterator[:next]
+			end
+		end
+		def sort! #Algoritmo de la burbuja para ordenar
+			return if size <= 1
+			change = true
+			while change
+				change = false
+				i = @head
+				i_1 = @head[:next]
+				while i_1 != nil
+					if(i[:value] > i_1[:value])
+						i[:value], i_1[:value] = i_1[:value], i[:value]
+						change = true
+					end
+					i = i_1
+					i_1 = i_1[:next]
+				end
 			end
 		end
 	end

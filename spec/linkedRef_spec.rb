@@ -39,7 +39,7 @@ describe LinkedRef::LinkedList do
 		expect(@lista.to_s).to eq("[Garcia, M. G. (1981). Cronicas de una Muerte Anunciada (4) (1). Colombia: La Oveja Negra., , Palazon, J. & Pajuelo, L. (15 de noviembre de 2015). El Primer Movil con Android one. El Pais, pp. 68., Backer, J. (25 de julio de 2000). Evaluacion del Impacto de los Proyectos de Desarrollo en la Pobreza: Manual Para Profesionales (6), Web. Espana: Banco Internacional de Reconstruccion y Fomento/BANCO MUNDIAL. Disponible en: http://siteresources.worldbank.org/INTISPMA/Resources/Impact-Evaluation-Handbook--Spanish-/manual.pdf (3-12-2015).]")
 	end
 	it "Podemos comparar distintos tipos de referencias" do
-		expect(@articulo>@libro).to be false
-		expect(@libro<@articulo).to be false
+		expect(@articulo<@libro).to be false
+		expect(@libro>@articulo).to be false
 	end
 end

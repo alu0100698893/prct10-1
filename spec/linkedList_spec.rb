@@ -85,4 +85,10 @@ describe LinkedRef::LinkedList do
 			expect(@lista_insertada.max.to_s).to eq("8")
 		end
 	end
+	describe "Existe un metodo para ordenar" do
+		it "Se ordenan correctamente los elementos" do
+			@lista_insertada.sort!
+			expect(@lista_insertada.to_s).to eq("[3, 4, 5, 6, 7, 8]")
+		end
+	end
 end
