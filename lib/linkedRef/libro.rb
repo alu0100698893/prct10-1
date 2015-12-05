@@ -2,31 +2,20 @@ require 'linkedRef/referencia'
 
 module LinkedRef
 	class Libro < Referencia
-		def initialize(autores, titulo, fecha, editorial, isbn, edicion = nil)
-			super(autores, titulo, fecha)
+		def initialize(autores, titulo, anio, editorial, edicion, volumen, pais)
+			raise ArgumentError, "El anio no es integer" unless anio.is_a?(Integer)
+			fecha = Date.new(anio, 1, 1)
+			super(autores, titulo, fecha, pais)
 			raise ArgumentError, "La editorial no es un string" unless editorial.is_a?(String)
-			raise ArgumentError, "El isbn no es un array" unless isbn.is_a?(Array)
-			raise ArgumentError, "La edicion no es numeric o nil" unless edicion.nil? || edicion.is_a?(Numeric)
+			raise ArgumentError, "La edicion no es un numero" unless edicion.is_a?(Integer)
+			raise ArgumentError, "El volumen no es un mnumero" unless volumen.is_a?(Integer)
 			@editorial = editorial
 			@edicion = edicion
-			@isbn = isbn
+			@volumen = volumen
 		end
 		def to_s
 			string = ""
-			string += autores
-			string += "\n" + titulo
-			string += ".\nEd: " + @editorial
-			string += " (" + @edicion.to_s + ")" unless @edicion.nil?
-			string += "\n"
-			@isbn.each do |i|
-				if(i.length < 11)
-					string << "ISBN-10: " << i
-				else
-					string << "ISBN-13: " << i
-				end
-				string << "\n" unless i == @isbn.last
-			end
-			return string
+			string  << @autores << " (" << fecha_anio() << "). " << @titulo << " (" << @edicion.to_s << ") (" << @volumen.to_s << "). " << @pais << ": " << @editorial << "."
 		end
 	end
 end

@@ -39,7 +39,18 @@ module LinkedRef
 			raise ArgumentError, "La fecha no es de tipo Date" unless fecha.is_a?(Date)
 			raise ArgumentError, "El pais no es string o nulo" unless pais.nil? or pais.is_a?(String)
 			@autores = str
-			@titulo = titulo
+
+			titarr = titulo.split(/\W+/)
+			titarr.each do |palabra|
+				if palabra.length > 3
+					palabra.capitalize!
+				else
+					palabra.downcase!
+				end
+			end
+
+			@titulo = titarr.join(' ')
+
 			@fecha = fecha
 			@pais = pais
 		end
