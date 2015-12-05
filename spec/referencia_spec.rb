@@ -95,5 +95,9 @@ describe LinkedRef::Referencia do
 		it "Prueba diciembre" do
 			expect(@ref1.get_mes(12)).to eq("diciembre")
 		end
+		it "Prueba para algo que no es un mes" do
+			expect{@ref1.get_mes(13)}.to raise_error(RuntimeError, "Numero erroneo de mes")
+			expect{@ref1.get_mes(-3)}.to raise_error(RuntimeError, "Numero erroneo de mes")
+		end
 	end
 end
