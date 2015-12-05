@@ -4,12 +4,14 @@ describe LinkedRef::LinkedList do
 	before :each do
 		@lista = LinkedRef::LinkedList.new
 		@lista_insertada = LinkedRef::LinkedList.new
+		@lista_uno = LinkedRef::LinkedList.new
 		@lista_insertada.insert_beg(4)
 		@lista_insertada.insert_beg(6)
 		@lista_insertada.insert_beg(8)
 		@lista_insertada.insert_end(3)
 		@lista_insertada.insert_end(5)
 		@lista_insertada.insert_end(7)
+		@lista_uno.insert_end(4)
 	end
 	it "Debe existir el nodo" do
 		expect(Struct::Node.new(1, nil)).not_to be_nil
@@ -45,6 +47,14 @@ describe LinkedRef::LinkedList do
 			@lista_insertada.extract_end
 			@lista_insertada.extract_end
 			expect(@lista_insertada.to_s).to eq("[8, 6, 4, 3]")
+		end
+		it "Extraccion con un unico elemento por el final" do
+			@lista_uno.extract_end
+			expect(@lista_uno.to_s).to eq("[]")
+		end
+		it "Extraccion con un unico elemento por el principio" do
+			@lista_uno.extract_beg
+			expect(@lista_uno.to_s).to eq("[]")
 		end
 		it "Lanzar excepciones en caso de extraer estando vacia" do
 			expect{@lista.extract_end}.to raise_error(RuntimeError, "List is empty, you can't extract")
