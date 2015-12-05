@@ -11,6 +11,9 @@ describe LinkedRef::Referencia do
 		@fecha2 = Date.new(2001, 2, 3)
 		@ref4 = LinkedRef::Referencia.new(["Javier Palazon"], "Mi Titulo", @fecha1)
 		@ref5 = LinkedRef::Referencia.new(["Javier Palazon"], "Mi Titulo", @fecha2)
+
+		@ref6 = LinkedRef::Referencia.new(["Javier Palazon"], "AAA primero", @fecha)
+		@ref7 = LinkedRef::Referencia.new(["Javier Palazon"], "ZZZ segundo", @fecha)
 	end
 	describe "Existe la clase referencia" do
 		it "Debe exisistir la clase referencia" do
@@ -43,5 +46,9 @@ describe LinkedRef::Referencia do
 	it "Si los autores coiniciden, ordenar en base a la fecha (mas antiguo primero" do
 		expect(@ref4<@ref5).to be true #1997 < 2001? true
 		expect(@ref5<@ref4).to be false #2001 < 1997? false
+	end
+	it "Si los autores y las fechas coinciden, ordenar en base al título" do
+		expect(@ref6<@ref7).to be true #A < Z? true
+		expect(@ref7<@ref6).to be false #A < Z? true
 	end
 end
