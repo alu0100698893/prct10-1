@@ -58,4 +58,42 @@ describe LinkedRef::Referencia do
 			expect(@ref1==@ref1).to be true #A == A? true
 		end
 	end
+	describe "Pruebas con cada uno de los meses" do
+		it "Prueba enero" do
+			expect(@ref1.get_mes(1)).to eq("enero")
+		end
+		it "Prueba febrero" do
+			expect(@ref1.get_mes(2)).to eq("febrero")
+		end
+		it "Prueba marzo" do
+			expect(@ref1.get_mes(3)).to eq("marzo")
+		end
+		it "Prueba abril" do
+			expect(@ref1.get_mes(4)).to eq("abril")
+		end
+		it "Prueba mayo" do
+			expect(@ref1.get_mes(5)).to eq("mayo")
+		end
+		it "Prueba junio" do
+			expect(@ref1.get_mes(6)).to eq("junio")
+		end
+		it "Prueba julio" do
+			expect(@ref1.get_mes(7)).to eq("julio")
+		end
+		it "Prueba agosto" do
+			expect(@ref1.get_mes(8)).to eq("agosto")
+		end
+		it "Prueba septiembre" do
+			expect(@ref1.get_mes(9)).to eq("septiembre")
+		end
+		it "Prueba octubre" do
+			expect(@ref1.get_mes(10)).to eq("octubre")
+		end
+		it "Prueba noviembre" do
+			expect(@ref1.get_mes(11)).to eq("noviembre")
+		end
+		it "Prueba diciembre" do
+			expect(@ref1.get_mes(12)).to eq("diciembre")
+		end
+	end
 end
