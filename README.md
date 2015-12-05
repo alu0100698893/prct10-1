@@ -31,7 +31,7 @@ Usaremos la metodología TDD (*Test Driven Development*). Además de usar las he
 
         García, M. G. (1981). Cronicas de una Muerte Anunciada (4) (1). Colombia: La Oveja Negra.
 
-###Artículo (de revista)?:
+###Artículo de revista:
 
 * **Autor 1**: Maria Persico Jimenez
 * **Autor 2**: Pablo Perisco Jimenez
@@ -56,8 +56,7 @@ Usaremos la metodología TDD (*Test Driven Development*). Además de usar las he
 * **Fecha**: 15-11-2015
 * **Título**: El primer movil con Android One
 * **Periódico**: El Pais
-* **pp?**: ????????
-* **Páginas (del periódico?)**: 68
+* **Páginas del periódico**: 68
 * **Resultado esperado**:
 
         Palazón, J. & Pajuelo, L. (15 de noviembre de 2015). El Primer Movil con Android One. El País, pp. 68.
@@ -68,11 +67,11 @@ Usaremos la metodología TDD (*Test Driven Development*). Además de usar las he
 * **Fecha**: 25-7-2000
 * **Título**: Evaluacion del impacto de los proyectos de desarrollo en la pobreza: Manual para profesionales.
 * **Edición**: 6
-* **Tipo de medio?**: Web
+* **Tipo de medio**: Web
 * **Lugar de publicación**: España
-* **Editor**: 
+* **Editor**: Banco Internacional de Reconstrucción y Fomento/BANCO MUNDIAL
 * **Disponible en**: http://siteresources.worldbank.org/INTISPMA/Resources/Impact-Evaluation-Handbook--Spanish-/manual.pdf
 * **Fecha de acceso**: 3-12-2015
 * **Resultado esperado**:
 
-        Backer. J. (25 de Julio de 2000). Evaluacion del impacto de los proyectos de desarrollo en la pobreza: Manual para profesionales (6), Web. Espana: editor?. Disponible en: http://siteresources.worldbank.org/INTISPMA/Resources/Impact-Evaluation-Handbook--Spanish-/manual.pdf (3-12-2015).
+        Backer. J. (25 de Julio de 2000). Evaluacion del impacto de los proyectos de desarrollo en la pobreza: Manual para profesionales (6), Web. Espana: Banco Internacional de Reconstrucción y Fomento/BANCO MUNDIAL. Disponible en: http://siteresources.worldbank.org/INTISPMA/Resources/Impact-Evaluation-Handbook--Spanish-/manual.pdf (3-12-2015).
