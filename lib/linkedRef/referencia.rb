@@ -37,6 +37,7 @@ module LinkedRef
 			end
 			raise ArgumentError, "El titulo no es un string" unless titulo.is_a?(String)
 			raise ArgumentError, "La fecha no es de tipo Date" unless fecha.is_a?(Date)
+			raise ArgumentError, "El pais no es string o nulo" unless pais.nil? or pais.is_a?(String)
 			@autores = str
 			@titulo = titulo
 			@fecha = fecha
