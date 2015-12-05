@@ -9,8 +9,8 @@ module LinkedRef
 			str=""
 			editores.each do |e|
 				raise ArgumentError, "Uno de los autores no es un string" unless e.is_a?(String)
-				raise ArgumentError, "Se especifica unicamente el nombre o el apellido" unless e.split(/\W+/).length > 1
-				separado = e.split(/\W+/)
+				raise ArgumentError, "Se especifica unicamente el nombre o el apellido" unless e.split(' ').length > 1
+				separado = e.split(' ')
 				str+=separado[1]
 				str+=", "
 				unless separado[2].nil?
