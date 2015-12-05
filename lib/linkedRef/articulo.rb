@@ -1,4 +1,4 @@
-require 'linkedRef/publicacionesPeriodicas'
+require 'linkedRef/libro'
 
 module LinkedRef
 	class Articulo < Libro

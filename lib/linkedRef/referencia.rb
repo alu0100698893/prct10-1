@@ -87,12 +87,12 @@ module LinkedRef
 				raise RuntimeError, "Numero erroneo de mes"
 			end	
 		end
-		def fecha_completa()
-			string =  @fecha.day.to_s
+		def fecha_completa(fecha)
+			string =  fecha.day.to_s
 			string += " de "
-			string += get_mes(@fecha.mon)
+			string += get_mes(fecha.mon)
 			string += " de "
-			string += @fecha.year.to_s
+			string += fecha.year.to_s
 		end
 		def fecha_anio()
 			@fecha.year.to_s
