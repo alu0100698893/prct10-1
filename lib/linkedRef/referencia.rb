@@ -84,15 +84,10 @@ module LinkedRef
 		end
 		def <=>(other)
 			if(@autores == other.autores)
-				puts "Los autores son iguales, ordenar en base a la publicacion"
 				if(@fecha == other.fecha)
-					puts "Ordenar en base a el titulo"
 					if(@titulo == other.titulo)
 						return 0 #Son iguales
 					else
-						if(@titulo == other.titulo)
-							return 0
-						end
 						arr = [@titulo, other.titulo]
 						arr.sort_by!{|t| t.downcase}
 						if(arr.first == @titulo)
@@ -106,7 +101,6 @@ module LinkedRef
 					return -1
 				end
 			else
-				puts "los autores no coinciden"
 				arr = [@autores, other.autores]
 				arr.sort_by!{|t| t.downcase}
 				if(arr.first == @autores)
