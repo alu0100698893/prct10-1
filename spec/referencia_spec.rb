@@ -38,10 +38,10 @@ describe LinkedRef::Referencia do
 	end
 	it "Ordenar en base al autor simplemente" do
 		expect(@ref2<@ref1).to be false #Garcia < Palazon? 7 < 17? true
-		expect(@ref2>@ref1).to be true #Garcia > Palazon? 7 > 17? false
+		expect(@ref1<@ref2).to be true #Garcia > Palazon? 17 < 7? false
 	end
 	it "Si los autores coiniciden, ordenar en base a la fecha (mas antiguo primero" do
 		expect(@ref4<@ref5).to be true #1997 < 2001? true
-		expect(@ref4>@ref5).to be false #1997 > 2001? false
+		expect(@ref5<@ref4).to be false #2001 < 1997? false
 	end
 end
