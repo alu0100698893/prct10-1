@@ -16,43 +16,31 @@ require "date"
 
 module LinkedRef
 	class Referencia
-		attr_reader :titulo, :autores_arr
+		attr_reader :titulo, :autores, :fecha
 		include Comparable
 		def initialize(autores, titulo, fecha, pais=nil)
 			raise ArgumentError, "El autor no es un array" unless autores.is_a?(Array)
-			autores_ape = []
+			str=""
 			autores.each do |a|
 				raise ArgumentError, "Uno de los autores no es un string" unless a.is_a?(String)
 				raise ArgumentError, "Se especifica unicamente el nombre o el apellido" unless a.split(/\W+/).length > 1
 				separado = a.split(/\W+/)
-				final = []
-				separado.each do |str|
-					final << str
+				str+=separado[1]
+				str+=", "
+				unless separado[2].nil?
+					str+=separado[2][0]
+					str+=". "
 				end
-				autores_ape << final
+				str+=separado[0][0]
+				str+="."
+				str+=" & " unless a == autores.last
 			end
 			raise ArgumentError, "El titulo no es un string" unless titulo.is_a?(String)
 			raise ArgumentError, "La fecha no es de tipo Date" unless fecha.is_a?(Date)
-			@autores = autores_ape
-			@autores_arr = autores_ape
+			@autores = str
 			@titulo = titulo
 			@fecha = fecha
 			@pais = pais
-		end
-		def autores
-			final = ""
-			@autores.each do |a|
-				final+=a[1]
-				final+=", "
-				unless a[2].nil?
-					final+=a[2][0]
-					final+=". "
-				end
-				final+=a[0][0]
-				final+="."
-				final+=", " unless a == @autores.last
-			end
-			return final
 		end
 		def get_mes(numero)
 			return case numero
@@ -98,7 +86,7 @@ module LinkedRef
 			if(@autores == other.autores)
 				puts "Los autores son iguales, ordenar en base a la publicacion"
 				if(@fecha == other.fecha)
-					puts "Ordenar en base a el título"
+					puts "Ordenar en base a el titulo"
 					if(@titulo == other.titulo)
 						return 0 #Son iguales
 					else
@@ -118,26 +106,13 @@ module LinkedRef
 					return -1
 				end
 			else
-				puts "Los autores son distintos, revisar el tamaño"
-				if @autores.size < other.autores_arr.size
-					puts "Other tiene mas autores"
-					if(other.autores_arr-@autores).empty?
-						return -1
-					end
-				elsif @autores.size > other.autores_arr.size
-					puts "Self tiene mas autores"
-					if(other.autores_arr-@autores).empty?
-						return 1
-					end
-				end
-				#Si tienen el mismo tamaño, ordenar segun el apellido del primer autor
-				puts "Tienen el mismo tamaño, asi que hay que ver cual va primero"
-				arr = [@autores[0][1], other.autores_arr[0][1]]
+				puts "los autores no coinciden"
+				arr = [@autores, other.autores]
 				arr.sort_by!{|t| t.downcase}
 				if(arr.first == @autores)
-					return -1
+					return 1
 				end
-				return 1
+				return -1
 			end
 		end
 	end
