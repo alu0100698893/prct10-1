@@ -14,6 +14,8 @@ describe LinkedRef::Referencia do
 
 		@ref6 = LinkedRef::Referencia.new(["Javier Palazon"], "AAA primero", @fecha)
 		@ref7 = LinkedRef::Referencia.new(["Javier Palazon"], "ZZZ segundo", @fecha)
+
+		@ref8 = LinkedRef::Referencia.new(["Nombre Apellido"], "Un titulo bien formateado sin mayusculas", @fecha)
 	end
 	describe "Existe la clase referencia" do
 		it "Debe exisistir la clase referencia" do
@@ -98,6 +100,11 @@ describe LinkedRef::Referencia do
 		it "Prueba para algo que no es un mes" do
 			expect{@ref1.get_mes(13)}.to raise_error(RuntimeError, "Numero erroneo de mes")
 			expect{@ref1.get_mes(-3)}.to raise_error(RuntimeError, "Numero erroneo de mes")
+		end
+	end
+	describe "Se formatea correctamente el titulo" do
+		it "Probando con uno sencillo" do
+			expect(@ref8.titulo).to eq("Un Titulo Bien Formateado sin Mayusculas")
 		end
 	end
 end

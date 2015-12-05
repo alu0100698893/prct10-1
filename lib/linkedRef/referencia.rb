@@ -23,7 +23,7 @@ module LinkedRef
 			str=""
 			autores.each do |a|
 				raise ArgumentError, "Uno de los autores no es un string" unless a.is_a?(String)
-				raise ArgumentError, "Se especifica unicamente el nombre o el apellido" unless a.split(/\W+/).length > 1
+				raise ArgumentError, "Se especifica unicamente el nombre o el apellido" unless a.split(' ').length > 1
 				separado = a.split(/\W+/)
 				str+=separado[1]
 				str+=", "
@@ -35,17 +35,20 @@ module LinkedRef
 				str+="."
 				str+=" & " unless a == autores.last
 			end
+			@autores = str
 			raise ArgumentError, "El titulo no es un string" unless titulo.is_a?(String)
 			raise ArgumentError, "La fecha no es de tipo Date" unless fecha.is_a?(Date)
 			raise ArgumentError, "El pais no es string o nulo" unless pais.nil? or pais.is_a?(String)
-			@autores = str
 
-			titarr = titulo.split(/\W+/)
+			titarr = titulo.split(' ')
 			titarr.each do |palabra|
 				if palabra.length > 3
 					palabra.capitalize!
 				else
 					palabra.downcase!
+				end
+				if palabra == titarr[0]
+					palabra.capitalize!
 				end
 			end
 
