@@ -11,6 +11,7 @@ Se nos pide cumplir con el formato del APA para representar las referencias bilb
 * **[R06]** - Utilizar "&" para unificar varios autor-es de una misma referencia.
 * **[R07]** - Después de la primera lína, añadir sangría francesa.
 * **[R08]** - En mayúsculas la primera de las palabras principales de los títulos de las revista
+* **[R09]** - Crear una clase que englobe a la clase lista y referencia
 
 Usaremos la metodología TDD (*Test Driven Development*). Además de usar las herramientas de anteriores prácticas (como Git, Guard, Rake, Travis CI, etc), se usará Coveralls para poder comprobar que las pruebas se ejecutan sobre todo el código.
 
