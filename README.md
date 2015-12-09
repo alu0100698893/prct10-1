@@ -32,7 +32,7 @@ Usaremos la metodología TDD (*Test Driven Development*). Además de usar las he
 
         García, M. G. (1981). Cronicas de una Muerte Anunciada (4) (1). Colombia: La Oveja Negra.
 
-###Artículo de revista:
+###Artículo de un libro:
 
 * **Autor 1**: Maria Persico Jimenez
 * **Autor 2**: Pablo Perisco Jimenez
@@ -48,7 +48,7 @@ Usaremos la metodología TDD (*Test Driven Development*). Además de usar las he
 * **Editorial**: Creatividad, educacion y desarrollo
 * **Resultado esperado**:
 
-        Perisco, J. M. & Perisco, J. P. (1997). El Estado. En E. Villalba & G. Magana (Eds.), Acreditación en Chile: La Experiencia de un Lustro (27) (8) (2). Chile: Creatividad, educacion y desarrollo.
+        Perisco, J. M. & Perisco, J. P. (1997). El Estado. En Villalba, G. E. & Magana, G. G. (Eds.), Acreditacion en Chile: la Experiencia de un Lustro (27) (8) (2). Chile: Creatividad, educacion y desarrollo.
 
 ###Artículo de periódico:
 
