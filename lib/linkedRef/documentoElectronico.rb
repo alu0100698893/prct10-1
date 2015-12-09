@@ -15,7 +15,7 @@ module LinkedRef
 			@editor = editor
 			@fecha_acc = fecha_acc
 		end
-		def to_s()
+		def to_s
 			string = ""
 			string << @autores << " (" << fecha_completa(fecha) << "). " << @titulo << " (" << @edicion.to_s << "), " << @formato << ". " << @pais << ": " << @editor << ". Disponible en: " << @url << " (" << @fecha_acc.day.to_s << "-" << @fecha_acc.mon.to_s << "-" << @fecha_acc.year.to_s << ")."
 		end
