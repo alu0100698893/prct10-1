@@ -15,6 +15,10 @@ describe LinkedRef::ConjuntoRef do
 		@conjunto2.insertar(@periodico)
 		@conjunto2.insertar(@docElec)
 	end
+	it "Comprobar que existe" do
+		expect(LinkedRef::ConjuntoRef).to be_kind_of(Object)
+		expect(@conjunto).to be_kind_of(LinkedRef::ConjuntoRef)
+	end
 	it "Insertar elementos, y ordenar automaticamnete" do
 		@conjunto.insertar(@libro)
 		@conjunto.insertar(@articulo)
