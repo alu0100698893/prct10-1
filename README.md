@@ -11,6 +11,7 @@ Se nos pide cumplir con el formato del APA para representar las referencias bilb
 * **[R06]** - Utilizar "&" para unificar varios autor-es de una misma referencia.
 * **[R07]** - Después de la primera lína, añadir sangría francesa.
 * **[R08]** - En mayúsculas la primera de las palabras principales de los títulos de las revista
+* **[R09]** - Crear una clase que englobe a la clase lista y referencia
 
 Usaremos la metodología TDD (*Test Driven Development*). Además de usar las herramientas de anteriores prácticas (como Git, Guard, Rake, Travis CI, etc), se usará Coveralls para poder comprobar que las pruebas se ejecutan sobre todo el código.
 
@@ -31,7 +32,7 @@ Usaremos la metodología TDD (*Test Driven Development*). Además de usar las he
 
         García, M. G. (1981). Cronicas de una Muerte Anunciada (4) (1). Colombia: La Oveja Negra.
 
-###Artículo de revista:
+###Artículo de un libro:
 
 * **Autor 1**: Maria Persico Jimenez
 * **Autor 2**: Pablo Perisco Jimenez
@@ -47,7 +48,7 @@ Usaremos la metodología TDD (*Test Driven Development*). Además de usar las he
 * **Editorial**: Creatividad, educacion y desarrollo
 * **Resultado esperado**:
 
-        Perisco, J. M. & Perisco, J. P. (1997). El Estado. En E. Villalba & G. Magana (Eds.), Acreditación en Chile: La Experiencia de un Lustro (27) (8) (2). Chile: Creatividad, educacion y desarrollo.
+        Perisco, J. M. & Perisco, J. P. (1997). El Estado. En Villalba, G. E. & Magana, G. G. (Eds.), Acreditacion en Chile: la Experiencia de un Lustro (27) (8) (2). Chile: Creatividad, educacion y desarrollo.
 
 ###Artículo de periódico:
 
